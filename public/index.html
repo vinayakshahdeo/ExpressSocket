@@ -1,0 +1,14 @@
+<!-- according to socket.io docs we are using static method so we can serve the client in this path so nocdn needed not yet atleast-->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    // create instance of server in client
+    const socket = io.connect("http://localhost:9000")
+    //use socket instance to listen to messages sent from server with "messageS" keyword
+    socket.on("messageS", (dataFromServer) => {
+        console.log(dataFromServer);
+        //now using socket emit the message from client with "keywordC for the backend"
+        socket.emit("messageC", {
+            data: "message from Client"
+        })
+    })
+</script>
