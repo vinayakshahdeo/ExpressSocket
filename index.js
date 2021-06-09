@@ -18,11 +18,19 @@ const io = socketio(expressServer, {
 //connect socket
 io.on("connect", (socket) => {
     //emit message from Server using messageS use it to catch on client using "messageS keyword"
-    socket.emit("messageS", {
-        data: "Welcome from Server"
-    })
+    // socket.emit("messageS", {
+    //     data: "Welcome from Server"
+    // })
     //receive message from client and log it
-    socket.on("messageC", dataFromClient => {
-        console.log(dataFromClient)
+    // socket.on("messageC", dataFromClient => {
+    //     // console.log(dataFromClient)
+    // })
+    socket.on("messageToServer", ({
+        text
+    }) => {
+        // console.log(text);
+        io.emit("messageS", {
+            data: text
+        });
     })
 })
