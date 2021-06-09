@@ -1,0 +1,28 @@
+{
+  "name": "expresssocket",
+  "version": "1.0.0",
+  "description": "express and socketio example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinayakshahdeo/ExpressSocket.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "socket.io"
+  ],
+  "author": "vinayak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinayakshahdeo/ExpressSocket/issues"
+  },
+  "homepage": "https://github.com/vinayakshahdeo/ExpressSocket#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  }
+}
